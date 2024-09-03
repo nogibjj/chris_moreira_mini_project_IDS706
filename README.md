@@ -5,3 +5,11 @@ Cash Flow Calculator Test
 - MAKEFILE
 - github actions
 - devcontainer
+
+
+- Makefile
+- Requirenments
+- Main.py
+- Test
+- README
+- devcontainer (potentially)

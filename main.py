@@ -1,38 +1,28 @@
-import math
+# import math
 
 
-def add(x, y):
-    return math.ceil(x) + math.floor(y)
+# def add(x, y):
+#     return math.ceil(x) + math.floor(y)
 
 
-# import datetime as dt
+import datetime as dt
 
 
-# def present_value(cash_flow):
+def present_value(cash_flow, discount_rate=0.04):
+    if not cash_flow:
+        return "Current dictionary has no Cash Flow Data"
 
-#     if not cash_flow:
-#         return "Current data structure has has no Cash Flow Info"
+    current_year = int(dt.datetime.now().year())
+    present_value = 0
 
-#     # Cash Flow Formula for PV is PV = CF/(1+r)^n
+    for year, amount in cash_flow.items():
+        if year < current_year:
+            continue
 
-#     # formula to give me current year
-#     current_year = dt.datetime.now().year()
+        n = year - current_year
+        present_value += amount / ((1 + discount_rate) ** n)
 
-#     # we start with PV = 0
-#     present_value = 0
-
-#     # this is our r in the formula
-#     discount_rate = 0.04
-
-#     for year, amount in cash_flow.items():
-
-#         if year < current_year:
-#             continue
-
-#         n = year - current_year
-#         present_value = present_value + amount / ((1 + discount_rate) ** n)
-
-#         return present_value
+    return present_value
 
 
 # # Test Cases
