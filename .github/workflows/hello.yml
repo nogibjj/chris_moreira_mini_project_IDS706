@@ -35,14 +35,3 @@ jobs:
       - name: deploy the app
         run: |
           make deploy
-
-
-name: Python Application Test with Github Actions 
-on:
-  schedule:
-  - cron:  '0 3 * * SUN'
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
