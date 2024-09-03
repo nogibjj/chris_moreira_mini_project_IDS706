@@ -5,14 +5,14 @@
 #     return math.ceil(x) + math.floor(y)
 
 
-import datetime as dt
+from datetime import datetime
 
 
 def present_value(cash_flow, discount_rate=0.04):
     if not cash_flow:
         return "Current dictionary has no Cash Flow Data"
 
-    current_year = int(dt.datetime.now().year())
+    current_year = datetime.now().year
     present_value = 0
 
     for year, amount in cash_flow.items():
