@@ -2,7 +2,7 @@
 from main import present_value
 
 
-def presentv_test():
+def test_add():
     # Test 1: Empty cash flow dictionary
     assert present_value({}, 0.04) == "Current dictionary has no Cash Flow Data"
 
@@ -17,7 +17,7 @@ def presentv_test():
 
 
 if __name__ == "__main__":
-    presentv_test()
+    test_add()
     print("Test Complete & passed!")
 
 
