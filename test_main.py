@@ -18,7 +18,7 @@ def presentv_test():
 
 if __name__ == "__main__":
     presentv_test()
-    print("Test Complete passed!")
+    print("Test Complete & passed!")
 
 
 # def test_present_value():
