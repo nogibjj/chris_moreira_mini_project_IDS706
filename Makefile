@@ -4,7 +4,7 @@ install:
 format:
 	black *.py
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	pylint --disable=R,C --ignore-patterns=presentv_test.*?py *.py
 
 test:
 	python -m pytest -cov=main test_main.py
