@@ -13,16 +13,16 @@ def present_value(cash_flow, discount_rate=0.04):
         return "Current dictionary has no Cash Flow Data"
 
     current_year = datetime.now().year
-    present_value = 0
+    present_val = 0
 
     for year, amount in cash_flow.items():
         if year < current_year:
             continue
 
         n = year - current_year
-        present_value += amount / ((1 + discount_rate) ** n)
+        present_val += amount / ((1 + discount_rate) ** n)
 
-    return present_value
+    return present_val
 
 
 # # Test Cases
